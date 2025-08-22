@@ -1,19 +1,23 @@
 import './App.css';
+import Header from './header';
+import Main from './main';
+import Footer from './footer';
+import Nav from './nav';
+import { Helmet } from 'react-helmet';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Welcome to the Developer Capstone Project</h1>
-        <p>This is a simple React application.</p>
-      </header>
-      <main>
-        <p>Explore the features and functionalities of this app!</p>
-      </main>
-      <footer className="App-footer">
-        <p>&copy; 2025 Developer Capstone Project</p>
-      </footer>
-
+      <Helmet>
+        <meta name="description" content="Little lemon restaurant application"/>
+        <meta property="og:title" content="Little Lemon"/>
+        <meta property="og:description" content="Little Lemon web app"/>
+        <meta property="og:image" content=""/>
+      </Helmet>
+      <Nav />
+      <Header/>
+        <Main/>
+          <Footer/>
     </div>
   );
 }
